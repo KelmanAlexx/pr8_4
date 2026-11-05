@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$PROJECT_DIR"
+dotnet run --project "$PROJECT_DIR/SatBackupToolkit.csproj" -- backup "$PROJECT_DIR/ExampleData" "$PROJECT_DIR/Backups"
